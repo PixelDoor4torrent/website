@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: 20px;
+    }
+
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    .flip-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 15pt;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: calc(45% - 15pt); /* 45% width for each card with 15pt margin and slight adjustment for spacing */
+      height: 300px; /* Adjusted height to fit the text */
+      border: 1px solid #f1f1f1;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      margin-bottom: 15pt; /* Spacing between rows */
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Do a horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if the image is missing) */
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+      padding: 20px;
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+      background-color: dodgerblue;
+      color: white;
+      transform: rotateY(180deg);
+      padding: 20px;
+    }
+
+    /* Label style */
+    .label {
+      margin: 50pt 0 15pt;
+      font-size: 30pt;
+      font-family: "Times New Roman", Times, serif;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Siddhartha cards -->
+  <div class="label">Siddhartha:</div>
+  <div class="flip-cards-container">
+    <!-- Card #1 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>1: "I will learn from myself, be my own pupil; I will learn from myself the secret of Siddhartha." (Hesse 32)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Anaphora</p>
+          <p>Analysis of device: The repetition of “I will learn from myself” shows off Siddhartha's introspective look on gaining knowledge. This is incredibly important as it's the founding tenant of the book and Siddhartha's journey. Even through his many ordeals he still stands firm that knowledge comes from the wisdom of real-world experience.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card #2 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>2: "When someone is seeking," said Siddhartha, "it happens quite easily that he only sees the thing that he is seeking; that he is unable to find anything, unable to absorb anything, because he is only thinking of the thing he is seeking, because he has a goal, because he is obsessed with his goal. Seeking means: having a goal. But finding means: being free, being open, having no goal." (Hesse 113)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Antithesis</p>
+          <p>Analysis of device: There isn’t a very clear refusal of the call, but I’d argue Siddhartha's rejection of traditional knowledge paths counts. Antithesis is used here to contrast seeking and finding. While the majority of the world seeks knowledge, he wishes to discover it. This comes in conflict with Govinda and his following of the Buddha. Later in the book, when Siddhartha reached apotheosis we see that this is the correct path.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card #3 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>3: "The Buddha has spoken of the world, of the illusion of the material world, the illusion of our ego. Mara, the world, is a deception. It is the work of Siddhartha's mind, derived from his senses. His senses deceive him from the reality of the world. The material world is nothing but an illusion of the senses." (Hesse 86)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Metaphor</p>
+          <p>Analysis of device: The material world is referred to as an illusion. I think this is both literal and metaphorical. Literal in the sense of the actual teachings of Buddhism; and metaphorical in the sense of the world being superficial. During Siddhartha's trials of being lost in his way and then refound, he profoundly realizes the vanity of material wealth.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card #4 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>4: “He realized that he was no longer a youth; he was now a man. He realized that something had left him, like the old skin that a snake sheds. Something was no longer with him, something that had accompanied him right through his youth and was part of him: this was the desire to have teachers and to listen to their teachings” (Hesse 37)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Simile</p>
+          <p>Analysis of device: This quote comes after Siddhartha leaves The Illustrious One (Buddha). They quarrel and Siddhartha comes to the conclusion that he must find his own path in the world, and sets off to discover his way. The use of comparing his transformation to the skin a snake sheds conveys a strong sense of renewal and metaphorical death of his old self.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card #5 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>5: “At that moment he heard an inward voice and the voice said “No!” Then all the magic disappeared from the young women’s smiling face” (Hesse 28)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Diction</p>
+          <p>Analysis of device: After finding a town, Siddartha comes across a beautiful woman. He is at first tempted but then rejects the temptation strongly. The use of “No!” in the inward voice is significant because it's one word, seeming like a visceral reaction. Siddhartha then continues along his path, renewed with the knowledge that he has the strength to resist.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card #6 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>6: “Had not his father also suffered the same pain that he was now suffering for his son? Had not his father died long ago, alone with having seen his son again? Did he not expect the same fate? Was it not a comedy, a strange and stupid thing, this repetition, this course of events in a fateful circle?” (Hesse 104)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Syntax</p>
+          <p>Analysis of device: After Siddhartha’s son runs away, he is intensely conflicted on whether or not he should pursue him. The reader is brought back in spirit to his childhood, when he first left his now-dead father- never to be seen again. Rhetorical questions are repetitively used to reflect the similarities of his and his father's experiences. This powerful use of syntax creates an almost euphoric sense of futility.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card #7 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>7: “‘Om,’ he pronounced inwardly, and he was conscious of Brahman, of the indestructibleness of life; he remembered all that he and forgotten, all that was divine” (Hesse 90)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Diction</p>
+          <p>Analysis of device: He uses powerful words like ‘divine’ and ‘indestructible’ which gives an intense feeling of deification. This is one of, if not the most crucial point in the book. At this moment Siddhartha's journey for self-fulfillment comes to a close, an ebullient moment of absolute death of the ego.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card #8 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>8: “As Vasudeva rose from the seat on the river bank, when he looked into Siddhartha’s eyes and saw the serenity of knowledge shining in them, he touched his shoulder gently in his kind protective way and said ‘I have waited for this hour my friend. Now that it has arrived, let me go. I have been Vasudeva, the ferryman, for a long time. Now it is over. Farewell hut, farewell river, farewell Siddhartha.’...And so he went away. Siddhartha watched him. With great joy and gravity he watched him, saw his steps full of peace, his face glowing, his form full of light” (Hesse 137)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Tone</p>
+          <p>Analysis of device: The tone used in the quote is intense and beatific, Vasudeva's achievement of Nirvana is very powerfully shown. With the leaving of Vasudeva, Siddhartha is forced to find his own way. Now relinquished from the mentor who guided him even in old, he is both overjoyed for his friend and afraid for what's to come. I think Vasudeva became a father figure to him, an apology for the leaving of his own.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+   <div class="label">Watership Down:</div>
+  <div class="flip-cards-container">
+    <!-- Flip card #1 -->
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>1: Quotation from the text: “In the darkness and warmth of the burrow Hazel suddenly woke, struggling and kicking with his back legs. Something was attacking him. ... His head cleared and he realized that he was alone except for Fiver. It was Fiver who was clambering over him, clawing and grabbing like a rabbit trying to climb a wire fence in a panic.” (Adams 7)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Foreshadowing</p>
+          <p>Analysis of device:  In the story Fiver is incredibly good at detecting the approach of danger. Fiver tells Hazel that danger is coming and they must flee to safety. Despite misgivings, Hazel agrees. Shortly after, the rabbits’ burrow was designated to have apartments built over it. This kicks off the story nicely as it gives a clear call to action.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip card #2 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>2: Quotation from the text: “The whole warren? Don’t be silly. They won’t come. They’ll say you’re out of your wits.. He did not want to believe Fiver, but he was afraid not to” (Adams 9)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Character motivation</p>
+          <p>Analysis of device: Rabbits may live in their burrow their whole life, so Fiver’s insistence that they flee is frightening to Hazel. Hazel is both afraid to go, and afraid to ignore the call. He initially resists. However, his close friendship and trust in Fiver motivates him to believe in his premonition. </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip card #3 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>3: Quotation from the text: “‘Well done,’ whispered Dandelion. “Running our risks for us, are you like El-ahrairah?’... It was warm praise and it cheered him” (Adams 24)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Allusion</p>
+          <p>Analysis of device: Shortly after they flee the burrow, and are wandering through the woods, Hazel agrees to scout for trouble. Another rabbit, Dandelion, makes this statement. Dandelion is comparing Fiver to El-Ahrairah, a reference to a mythical god of the rabbits mentioned earlier in the book. El-Ahrairah is a revered myth among the rabbits, so it's a high praise to be compared to him. Throughout the book, El-Ahrairah is a recurring character and it is implied that he provides supernatural aid to the refugee rabbits.
+</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip card #4 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>4: Quotation from the text: “Then we’ll follow the bank- that’ll help us to keep together’... the little band of rabbits had disappeared into the dim, moonlit night.” (Adams 36)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Foreshadowing</p>
+          <p>Analysis of device: In this section, the rabbits are leaving familiar territory. They are venturing far into the unknown. Foreshadowing is used here by implying that leaving and following the bank signifies the danger of the unknown, where anything could possibly go wrong. Though their journey has just begun, they have far to go.
+</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip card #5 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>5: Quotation from the text: “..try the big newcomer as an officer in the Near Hind Mark, under the instructions of Captain chervil. By ni-Frith Thlayli, still bleeding from the Mark gash inflicted in his left hunch, had taken up his duties.” (Adams 311)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Diction</p>
+          <p>Analysis of device: The use of descriptors for Thlayli’s wound conveys his devotion despite a mortal wound.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip card #6 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>6: Quotation from the text: “Bigwig was lying on his side, his back legs kicking and struggling. A length of twisted copper wire.. Was looped around his neck.. The projecting point of one strand had lacerated his neck and drops of blood welled one by one down his shoulder. FOr a few moments he lay panting.. Then he began struggling and fidgeting..” (Adams 99)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Imagery</p>
+          <p>Analysis of device: The use of vivid and dark imagery describes the morbid scene, creating an emotional attachment to Bigwig.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip card #7 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>7: Quotation from the text: “You’ll find it much harder to push me back from here, General.’ he said. With a weary, dull surprise, Woundwort realized that he was afraid.. ‘Thlayli,’ he said ‘we’ve unblocked a run out here. I can bring in enough rabbits to pull down this wall in four places. Why don't you come out?’ Thlayli’s reply, when it came, was low and gasping, but perfectly clear. ‘My chief Rabbit has told me to defense this run and until hue says otherwise I shall stay here” (Adams 450)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Foreshadowing</p>
+          <p>Analysis of device: The mention of unblocking the run and bringing in enough manpower foreshadows a possible turning point in the conflict.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip card #8 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p>8: Quotation from the text: “And how did you get back from the farm?” “A man brought me in a hrududu,” said Hazel, “Nearly all the way.” “And you flew the rest, I suppose,” said Bigwig, “Burning a white stick in your mouth? Come on, tell me sensibly.” (Adams 382)</p>
+        </div>
+        <div class="flip-card-back">
+          <p>Device identified in text: Mysticism</p>
+          <p>Mysticism
+          Analysis of device: After Hazel defeats General Woundwort, he is captured by a farmer. However, the kind farmer's daughter convinces her father to release him. This is the only chapter of the book that is told from a human point of view. After Hazel is driven in a truck back to the Warren and released into a field, his companions have trouble believing what happened. To them, it was a mystical or religious experience. Hazel has taken part in both the human and rabbit world.
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+	  <!-- Citations -->
+  <div class="label">Citations:</div>
+  <div class="citations">
+    <p>Adams, Richard, and David Parkins. <i>Watership Down</i>. Puffin, 2023.</p>
+    <p>Hesse, Hermann, et al. <i>Siddhartha</i>. Grasset, 2017.</p>
+  </div>
+
+</body>
+</html>
